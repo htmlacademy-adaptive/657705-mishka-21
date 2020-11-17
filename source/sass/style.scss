@@ -1,1 +1,23 @@
-// Начните писать стили здесь
+// Глобальные переменные
+@import "variables";
+
+// Шрифты
+@import "fonts";
+
+// Normalize
+@import "normalize";
+
+// Глобальные стили
+@import "global";
+
+// Стили блока page
+@import "page";
+
+// Стили главной страницы
+@import "index/index-style";
+
+// Стили страницы формы
+@import "form/form-style";
+
+//Стили страницы каталога
+@import "catalog/catalog-style";
