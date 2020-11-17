@@ -7,7 +7,7 @@
 <body class="page__body">
   <header class="page-header">
     <nav class="main-nav">
-      <a class="logo">
+      <a class="logo" href="index.html">
         <img class="logo__img" src="https://via.placeholder.com/86x35" width="86" height="35" alt="Логотип магазина Мишка">
       </a>
       <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
@@ -84,11 +84,11 @@
           <ul class="form-bio__list">
             <li class="form-bio__item">
               <label class="form-bio__label" for="name">Имя:</label>
-              <input class="form-bio__input" id="name" type="text" name="name" placeholder="Введите ваше имя*">
+              <input class="form-bio__input" id="name" type="text" name="name" placeholder="Введите ваше имя*" required>
             </li>
             <li class="form-bio__item">
               <label class="form-bio__label" for="surname">Фамилия:</label>
-              <input class="form-bio__input" id="surname" type="text" name="surname" placeholder="Укажите фамилию*">
+              <input class="form-bio__input" id="surname" type="text" name="surname" placeholder="Укажите фамилию*" required>
             </li>
             <li class="form-bio__item">
               <label class="form-bio__label" for="middle-name">Отчество:</label>
@@ -102,11 +102,11 @@
           <ul class="form-contacts__list">
             <li class="form-contacts__item">
               <label class="form-contacts__label" for="phone">Тел</label>
-              <input class="form-contacts__input" id="phone" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+              <input class="form-contacts__input" id="phone" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
             </li>
             <li class="form-contacts__item">
               <label class="form-contacts__label" for="e-mail">E-mail</label>
-              <input class="form-contacts__input" id="e-mail" type="email" name="e-mail" placeholder="Ваш Email*">
+              <input class="form-contacts__input" id="e-mail" type="email" name="e-mail" placeholder="Ваш Email*" required>
             </li>
           </ul>
         </fieldset>
