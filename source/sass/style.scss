@@ -1,23 +1,61 @@
+/*
+  Cтили для всех страниц
+*/
+
 // Глобальные переменные
-@import "variables";
+@import "global/variables";
 
 // Шрифты
-@import "fonts";
+@import "global/fonts";
 
 // Normalize
-@import "normalize";
+@import "global/normalize";
 
-// Глобальные стили
-@import "global";
-
-//Стили блока visually-hidden
-@import "visually-hidden";
-
-// Стили блока кнопки
-@import "button";
+// Глобальные тэги
+@import "global/global";
 
 // Стили блока page
-@import "page";
+@import "global/page";
+
+// Стили блока visually-hidden
+@import "global/visually-hidden";
+
+// Стили блока кнопки
+@import "global/button";
+
+// Стили блока body
+@import "global/body";
+
+// Стили блока page-header
+@import "global/page-header";
+
+// Стили блока main-nav
+@import "global/main-nav";
+
+// Стили блока logo
+@import "global/logo";
+
+// Стили блока site-list
+@import "global/site-list";
+
+// Стили блока search
+@import "global/search";
+
+// Стили блока cart
+@import "global/cart";
+
+// Стили блока page-footer
+@import "global/page-footer";
+
+// Стили блока copyright
+@import "global/copyright";
+
+// Стили блока social
+@import "global/social";
+
+/*
+  Cтили для отдельных страниц
+*/
 
 // Стили главной страницы
 @import "index/index-style";
@@ -25,5 +63,5 @@
 // Стили страницы формы
 @import "form/form-style";
 
-//Стили страницы каталога
+// Стили страницы каталога
 @import "catalog/catalog-style";

@@ -1,0 +1,13 @@
+.form-text__label {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  color: $green;
+  text-transform: uppercase;
+}
+
+.form-text__input::placeholder {
+  font-size: 17px;
+  line-height: 18px;
+  color: rgba($black, 0.3);
+}
