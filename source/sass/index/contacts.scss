@@ -1,0 +1,37 @@
+.contacts__title {
+  margin: 0 0 28px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: $black;
+}
+
+.contacts__list {
+  margin: 0 0 62px;
+
+  font-size: 14px;
+  line-height: 30px;
+}
+
+/* Нижнюю черту сделаю через псевдоэлемент в дальнейшем */
+.contacts__mail-link {
+  font-size: 17px;
+  line-height: 30px;
+  color: $lighter-black;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    color: $darker-green-hover;
+  }
+}
+
+.contacts__address {
+  font-style: normal;
+}
+
+.contacts__button {
+  display: block;
+  text-decoration: none;
+}
