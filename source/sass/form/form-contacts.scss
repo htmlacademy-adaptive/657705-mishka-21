@@ -1,0 +1,28 @@
+.form-contacts {
+  padding: 0;
+
+  border: none;
+}
+
+.form-contacts__list {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  color: $green;
+  text-transform: uppercase;
+
+  list-style: none;
+}
+
+.form-contacts__item:not(:last-child) {
+  margin-bottom: 34px;
+}
+
+.form-contacts__input::placeholder {
+  font-size: 17px;
+  line-height: 18px;
+  color: rgba($black, 0.3);
+}
