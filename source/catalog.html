@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>Мишка</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page__body">
-  <header class="page-header">
+<body class="page__body body">
+  <header class="body__header page-header">
     <nav class="main-nav">
       <a class="logo" href="index.html">
         <img class="logo__img" src="https://via.placeholder.com/86x35" width="86" height="35" alt="Логотип магазина Мишка">
@@ -13,26 +14,32 @@
       <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
-          <a href="#">Каталог товаров</a>
+          <a class="site-list__link" href="#">Каталог товаров</a>
         </li>
         <li class="site-list__item">
-          <a href="#">Вязание на заказ</a>
+          <a class="site-list__link" href="#">Вязание на заказ</a>
         </li>
       </ul>
-      <a class="main-nav__search search" href="#">
-        <span class="search__text">Поиск по сайту</span>
-      </a>
-      <a class="main-nav__cart" href="#">Корзина: пока пуста</a>
+      <div class="main-nav__search search">
+        <a class="search__link" href="#">
+          <span class="search__text">Поиск по сайту</span>
+        </a>
+      </div>
+      <div class="main-nav__cart cart">
+        <a class="cart__link" href="#">Корзина: пока пуста</a>
+      </div>
     </nav>
   </header>
 
-  <main class="page-main">
-    <h1 class="page-main__title">Каталог товаров</h1>
-    <section class="catalog">
-      <h2 class="visuallu-hidden">Список товаров</h2>
+  <main class="body__catalog-main catalog-main">
+    <div class="catalog-main__title-wrapper">
+      <h1 class="catalog-main__title">Каталог товаров</h1>
+    </div>
+    <section class="catalog-main__catalog catalog">
+      <h2 class="visually-hidden">Список товаров</h2>
       <ul class="catalog__list">
         <li class="catalog__item product">
-          <a class="product__link" href="#">
+          <a class="product__img-link" href="#">
             <img class="product__img" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Зайчик-попрыгайчик">
           </a>
           <a class="product__link" href="#">
@@ -43,7 +50,7 @@
           <a class="product__cart-icon" aria-label="Добавить в корзину"></a>
         </li>
         <li class="catalog__item product">
-          <a class="product__link" href="#">
+          <a class="product__img-link" href="#">
             <img class="product__img" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Зайчик-попрыгайчик">
           </a>
           <a class="product__link" href="#">
@@ -54,7 +61,7 @@
           <a class="product__cart-icon" aria-label="Добавить в корзину"></a>
         </li>
         <li class="catalog__item product">
-          <a class="product__link" href="#">
+          <a class="product__img-link" href="#">
             <img class="product__img" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Зайчик-попрыгайчик">
           </a>
           <a class="product__link" href="#">
@@ -67,17 +74,18 @@
       </ul>
     </section>
 
-    <section class="process">
+    <section class="catalog-main__process process">
       <div class="process__video">
         <img class="process__video-img" src="https://via.placeholder.com/260x150" width="260" height="150" alt="Процесс производства">
       </div>
       <h2 class="process__title">Процесс производства</h2>
-      <p class="process__desc">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+      <p class="process__desc">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
+        появляются наши товары.</p>
       <a class="process__button button">Сделать заказ</a>
     </section>
   </main>
 
-  <footer class="page-footer">
+  <footer class="body__footer page-footer">
     <div class="page-footer__logo">
       <a class="logo">
         <img class="logo__img" src="https://via.placeholder.com/86x35" width="86" height="35" alt="Логотип магазина Мишка">
