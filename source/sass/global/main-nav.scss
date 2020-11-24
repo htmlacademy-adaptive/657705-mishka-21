@@ -1,10 +1,101 @@
+.main-nav {
+  min-height: 79px; /* Времеено для построения сеток */
+  border-bottom: 1px solid $lighter-grey;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    min-height: 89px;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 200px 1fr;
+  }
+}
+
+.main-nav__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+  }
+}
+
+/* Времеено для построения сеток */
+.main-nav__toggle {
+  display: none;
+  width: 21px;
+  height: 20px;
+  background-color: black;
+  border: none;
+
+  @media (max-width: $mobile-max-width) {
+    display: block;
+  }
+}
+
 .main-nav__list {
+  display: none; /* Временно для mobile, до завершения открытия меню */
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+
+    background-color: $darker-white;
+    border-top: 1px solid $lighter-grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    background-color: $white;
+    border: none;
+  }
+}
+
+.main-nav__user-wrapper {
+  display: none; /* Временно для mobile, до завершения открытия меню */
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
 }
 
 .main-nav__search,
 .main-nav__cart {
   padding-top: 28px;
   padding-bottom: 28px;
+
+  border-left: 1px solid $lighter-grey;
+}
+
+.main-nav__sub-list {
+  display: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+
+    background-color: $darker-white;
+    border-top: 1px solid $lighter-grey;
+  }
 }

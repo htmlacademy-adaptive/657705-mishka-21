@@ -2,16 +2,19 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Мишка</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body body">
   <header class="body__header page-header">
     <nav class="main-nav">
-      <a class="logo">
-        <img class="logo__img" src="https://via.placeholder.com/86x35" width="86" height="35" alt="Логотип магазина Мишка">
-      </a>
-      <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+      <div class="main-nav__logo-wrapper">
+        <a class="logo">
+          <img class="logo__img" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+        </a>
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+      </div>
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
           <a class="site-list__link" href="#">Каталог товаров</a>
@@ -20,14 +23,24 @@
           <a class="site-list__link" href="#">Вязание на заказ</a>
         </li>
       </ul>
-      <div class="main-nav__search search">
-        <a class="search__link" href="#">
-          <span class="search__text">Поиск по сайту</span>
-        </a>
+      <div class="main-nav__user-wrapper">
+        <div class="main-nav__search search">
+          <a class="search__link" href="#">
+            <span class="search__text">Поиск по сайту</span>
+          </a>
+        </div>
+        <div class="main-nav__cart cart">
+          <a class="cart__link" href="#">Корзина: пока пуста</a>
+        </div>
       </div>
-      <div class="main-nav__cart cart">
-        <a class="cart__link" href="#">Корзина: пока пуста</a>
-      </div>
+      <ul class="main-nav__sub-list sub-list">
+        <li class="sub-list__item">
+          <a class="sub-list__link" href="#">Новые поступления</a>
+        </li>
+        <li class="sub-list__item">
+          <a class="sub-list__link" href="#">Распродажа</a>
+        </li>
+      </ul>
     </nav>
   </header>
 
