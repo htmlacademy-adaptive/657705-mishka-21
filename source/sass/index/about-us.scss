@@ -16,8 +16,22 @@
   font-size: 17px;
   line-height: 20px;
   color: $black;
+
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-.about-us__item {
+.about-us__sub-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.about-us__sub-item {
   margin-bottom: 30px;
 }

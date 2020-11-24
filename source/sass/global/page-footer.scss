@@ -2,6 +2,14 @@
   background-color: $grey;
 }
 
+.page-footer__logo {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
 .page-footer__copyright {
   padding-top: 22px;
   padding-bottom: 22px;
