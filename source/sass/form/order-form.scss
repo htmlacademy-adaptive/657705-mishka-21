@@ -1,18 +1,45 @@
-.order-form__radio,
-.order-form__checkbox {
+.order-form__radio {
   margin: 0 0 43px;
+
+  border: none;
 }
 
-.order-form__bio,
+.order-form__checkbox {
+  margin: 0 0 43px;
+
+  border: none;
+}
+
+.order-form__bio {
+  margin: 0 0 34px;
+
+  border: none;
+}
+
 .order-form__contacts {
   margin: 0 0 34px;
+
+  border: none;
 }
 
 .order-form__form-text {
   margin: 0 0 17px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.order-form__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .order-form__text {
+  order: 1;
   margin: 0 0 30px;
 
   font-size: 14px;
