@@ -6,6 +6,11 @@
   font-size: 25px;
   line-height: 30px;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
 }
 
 .reviews__list {
@@ -13,6 +18,18 @@
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+}
+
+.reviews__item {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .reviews__desc {
@@ -41,6 +58,18 @@
   line-height: 30px;
 }
 
+.reviews__arrow-wrapper {
+  /* Будут спозиционированы относительно reviews__item, так и не смог придумать как их вставить в сетку, не нарушая логику HTML */
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
 .reviews__button {
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
 }

@@ -2,6 +2,13 @@
   margin-bottom: 39px;
 }
 
+.body__footer {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .body__form-main {
   margin-bottom: 55px;
 }

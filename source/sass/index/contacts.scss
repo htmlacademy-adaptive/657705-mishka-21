@@ -5,6 +5,11 @@
   font-size: 18px;
   line-height: 30px;
   color: $black;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 1/ 2;
+  }
 }
 
 .contacts__list {
@@ -12,6 +17,19 @@
 
   font-size: 14px;
   line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+
+    grid-column: 1 / 2;
+    grid-row: 2/ 3;
+  }
 }
 
 /* Нижнюю черту сделаю через псевдоэлемент в дальнейшем */
@@ -34,4 +52,16 @@
 .contacts__button {
   display: block;
   text-decoration: none;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+}
+
+.contacts__map {
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 1/ -1;
+  }
 }
