@@ -1,7 +1,12 @@
 .form-radio {
   padding: 0;
+}
 
-  border: none;
+.form-radio__wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .form-radio__title {

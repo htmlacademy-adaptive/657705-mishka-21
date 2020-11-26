@@ -1,7 +1,5 @@
 .form-bio {
   padding: 0;
-
-  border: none;
 }
 
 .form-bio__title {
@@ -10,6 +8,13 @@
   line-height: 16px;
   color: $green;
   text-transform: uppercase;
+}
+
+.form-bio__wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .form-bio__list {

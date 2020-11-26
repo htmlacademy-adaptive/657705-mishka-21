@@ -50,6 +50,10 @@
 
     background-color: $darker-white;
     border-top: 1px solid $lighter-grey;
+
+    &--inner-bg {
+      background-color: $grey;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -97,5 +101,9 @@
 
     background-color: $darker-white;
     border-top: 1px solid $lighter-grey;
+
+    &--inner-bg {
+      background-color: $grey;
+    }
   }
 }
