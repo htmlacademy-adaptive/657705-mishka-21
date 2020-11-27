@@ -4,6 +4,14 @@
   height: 195px;
 }
 
+.product__info-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
 .product__link {
   display: inline-block;
   margin-bottom: 6px;
@@ -36,6 +44,11 @@
 
   font-size: 13px;
   line-height: 30px;
+}
+
+.product__price-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .product__price {

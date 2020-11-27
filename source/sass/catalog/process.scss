@@ -1,10 +1,34 @@
 .process__title {
+  order: -1;
   margin: 0;
 
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    order: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+}
+
+.process__video {
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+  }
+}
+
+.process__wrapper {
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
 }
 
 .process__desc {

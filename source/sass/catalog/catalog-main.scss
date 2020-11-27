@@ -18,3 +18,16 @@
 .catalog-main__catalog {
   margin-bottom: 30px;
 }
+
+.catalog-main__process {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid $lighter-grey;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
