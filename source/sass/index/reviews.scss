@@ -1,5 +1,5 @@
 .reviews__title {
-  margin: 0 0 14px;
+  margin: 0 30px 14px;
   padding: 0;
 
   font-weight: 700;
@@ -14,7 +14,7 @@
 }
 
 .reviews__list {
-  margin: 0;
+  margin: 0 30px 38px;
   padding: 0;
 
   list-style: none;
@@ -33,7 +33,7 @@
 }
 
 .reviews__desc {
-  margin: 0 0 30px;
+  margin: 0 0 29px;
 }
 
 .reviews__text {
@@ -45,6 +45,7 @@
 
 .reviews__author-name {
   display: block;
+  margin-bottom: 3px;
 
   font-style: normal;
   font-weight: 700;
@@ -60,13 +61,58 @@
 
 .reviews__arrow-wrapper {
   /* Будут спозиционированы относительно reviews__item, так и не смог придумать как их вставить в сетку, не нарушая логику HTML */
+  display: flex;
+
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
+.reviews__prev,
+.reviews__next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+  padding: 12px 10px;
+
+  border: 1px solid $lighter-grey;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.reviews__prev {
+  border-right: none;
+}
+
+.reviews__next svg {
+  transform: rotate(180deg);
+}
+
+.reviews__prev:hover svg,
+.reviews__next:hover svg {
+  opacity: 0.6;
+}
+
+.reviews__prev:active svg,
+.reviews__next:active svg {
+  opacity: 0.3;
+}
+
+.reviews__prev:active,
+.reviews__next:active {
+  outline: none;
+}
+
 .reviews__button {
+  display: block;
+  margin: 0 30px;
+  padding: 14px;
+
   text-decoration: none;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     grid-column: 2 / 3;

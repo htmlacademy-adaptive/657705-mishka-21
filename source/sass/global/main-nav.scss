@@ -1,7 +1,4 @@
 .main-nav {
-  min-height: 79px; /* Времеено для построения сеток */
-  border-bottom: 1px solid $lighter-grey;
-
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -17,28 +14,69 @@
 
 .main-nav__logo-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 79px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  background-color: $white;
+  border-bottom: 1px solid $lighter-grey;
 
   @media (min-width: $desktop-width) {
     grid-column: 2 / 3;
   }
 }
 
-/* Времеено для построения сеток */
 .main-nav__toggle {
-  display: none;
+  position: absolute;
+  top: 28px;
+  right: 30px;
+
+  padding: 0;
   width: 21px;
   height: 20px;
-  background-color: black;
-  border: none;
 
-  @media (max-width: $mobile-max-width) {
-    display: block;
-  }
+  background-color: white;
+
+  border: none;
+  cursor: pointer;
+}
+
+.main-nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 21px;
+  height: 20px;
+
+  background-color: transparent;
+  background-image: url("../img/icons/menu-close.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  box-shadow: none;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 3px;
+  right: 1px;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: $black;
+  box-shadow: 0 6px 0 0 $black, 0 12px 0 0 $black;
 }
 
 .main-nav__list {
-  display: none; /* Временно для mobile, до завершения открытия меню */
   margin: 0;
   padding: 0;
 
@@ -66,8 +104,6 @@
 }
 
 .main-nav__user-wrapper {
-  display: none; /* Временно для mobile, до завершения открытия меню */
-
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
@@ -83,10 +119,35 @@
 
 .main-nav__search,
 .main-nav__cart {
-  padding-top: 28px;
-  padding-bottom: 28px;
+  padding: 29px 30px 25px;
 
-  border-left: 1px solid $lighter-grey;
+  border-bottom: 1px solid $lighter-grey;
+}
+
+@media (max-width: $mobile-max-width) {
+  .main-nav--closed .main-nav__list,
+  .main-nav--closed .main-nav__user-wrapper {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__inner {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+  }
+
+  .page-header--no-js .main-nav__toggle {
+    display: none;
+  }
+
+  .page-header--no-js .main-nav__list {
+    display: block;
+  }
+
+  .page-header--no-js .main-nav__user-wrapper {
+    display: block;
+  }
 }
 
 .main-nav__sub-list {

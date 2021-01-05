@@ -10,7 +10,15 @@
   }
 }
 
+.page-footer__social {
+  margin: 0 30px 22px;
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid $lighter-grey-footer;
+}
+
 .page-footer__copyright {
-  padding-top: 22px;
-  padding-bottom: 22px;
+  display: flex;
+  justify-content: center;
+  margin: 0 30px;
 }

@@ -1,5 +1,5 @@
 .contacts__title {
-  margin: 0 0 28px;
+  margin: 0 30px 28px;
 
   font-weight: 700;
   font-size: 18px;
@@ -13,7 +13,7 @@
 }
 
 .contacts__list {
-  margin: 0 0 62px;
+  margin: 0 30px 62px;
 
   font-size: 14px;
   line-height: 30px;
@@ -32,10 +32,30 @@
   }
 }
 
-/* Нижнюю черту сделаю через псевдоэлемент в дальнейшем */
-.contacts__mail-link {
-  font-size: 17px;
+.contacts__item {
+  display: flex;
+
+  font-size: 14px;
   line-height: 30px;
+}
+
+.contacts__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.contacts__property {
+  width: 30%;
+}
+
+.contacts__value {
+  margin: 0;
+}
+
+.contacts__mail-link {
+  position: relative;
+
+  font-size: inherit;
+  line-height: inherit;
   color: $lighter-black;
   text-decoration: none;
 
@@ -43,25 +63,55 @@
   &:active {
     color: $darker-green-hover;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+
+    height: 1px;
+
+    background-color: $darker-green-link;
+  }
+
+  &:hover::after {
+    background-color: $darker-green-hover;
+  }
+
+  &:active::after {
+    background-color: $darker-green-hover;
+    opacity: 0.3;
+  }
 }
 
 .contacts__address {
   font-style: normal;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.contacts__map {
+  display: block;
+  margin: 0 auto 41px;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 1/ -1;
+  }
 }
 
 .contacts__button {
   display: block;
+  margin: 0 30px;
+  padding: 14px;
+  text-align: center;
+
   text-decoration: none;
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-  }
-}
-
-.contacts__map {
-  @media (min-width: $desktop-width) {
-    grid-column: 2 / 3;
-    grid-row: 1/ -1;
   }
 }
