@@ -5,6 +5,13 @@
   font-size: 25px;
   line-height: 30px;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 50px 44px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 
 .about-us__list {
@@ -21,6 +28,11 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    margin: 0 50px;
+
+    font-size: 20px;
+    line-height: 22px;
   }
 }
 
@@ -33,6 +45,10 @@
 
 .about-us__sub-item {
   margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 58px;
+  }
 }
 
 .about-us__sub-item--eco::before,
@@ -59,6 +75,11 @@
   margin-bottom: 16px;
 
   background-image: url("../img/icons/eco.svg");
+
+  @media (min-width: $tablet-width) {
+    top: -3px;
+    left: 8px;
+  }
 }
 
 .about-us__sub-item--price::before {
@@ -70,6 +91,11 @@
   margin-bottom: 27px;
 
   background-image: url("../img/icons/price.svg");
+
+  @media (min-width: $tablet-width) {
+    top: -2px;
+    left: 1px;
+  }
 }
 
 .about-us__sub-item--like::before {
@@ -81,6 +107,11 @@
   margin-bottom: 26px;
 
   background-image: url("../img/icons/like.svg");
+
+  @media (min-width: $tablet-width) {
+    top: 2px;
+    left: 8px;
+  }
 }
 
 .about-us__sub-item--tied::before {

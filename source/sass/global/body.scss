@@ -1,14 +1,18 @@
 .body__main {
   margin-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 57px;
+  }
+}
+
+.body__header {
+  position: relative;
 }
 
 .body__footer {
-  padding: 28px 0 17px;
-
-  @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
+  background-color: $grey;
+  padding: 0 50px;
 }
 
 .body__form-main {

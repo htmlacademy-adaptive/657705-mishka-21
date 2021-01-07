@@ -1,13 +1,11 @@
-.site-list {
-  list-style: none;
-
-  background-color: $white;
-}
-
 .site-list__item {
-  padding: 29px 30px 25px;
-
   border-bottom: 1px solid $lighter-grey;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 36px;
+
+    border: none;
+  }
 }
 
 .site-list__item:not(:last-child) {
@@ -18,8 +16,7 @@
 
 .site-list__link {
   display: block;
-
-  margin-left: 46px;
+  padding: 29px 30px 25px 76px;
 
   font-weight: 700;
   font-size: 17px;
@@ -33,5 +30,11 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+
+    font-size: 15px;
   }
 }

@@ -6,6 +6,8 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+
+    margin: 0 50px 37px;
   }
 
   @media (min-width: $desktop-width) {
@@ -24,6 +26,14 @@
   color: $green;
   text-transform: uppercase;
 
+  @media (min-width: $tablet-width) {
+    margin: 5px 13px 0 0;
+    width: 100px;
+
+    line-height: 17px;
+    text-align: center;
+  }
+
   @media (min-width: $desktop-width) {
     order: 0;
   }
@@ -36,19 +46,21 @@
   font-size: 25px;
   line-height: 30px;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 
 .best-product__desc {
-  padding-bottom: 42px;
-
-  background-image: url("../img/zigzag-line-mobile.svg");
-  background-repeat: repeat-x;
-  background-position: bottom;
-
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 334px;
+    grid-template-columns: 1fr auto;
     grid-template-rows: auto auto;
+    column-gap: 42px;
   }
 }
 
@@ -58,11 +70,20 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+
+    margin: 0 0 0 50px;
   }
 }
 
 .best-product__text {
   margin: 0 0 28px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+
+    margin: 0 0 47px;
+  }
 }
 
 .best-product__list {
@@ -82,6 +103,10 @@
 
 .best-product__property {
   width: 38%;
+
+  @media (min-width: $tablet-width) {
+    width: 33%;
+  }
 }
 
 .best-product__value {
@@ -91,16 +116,20 @@
 
 .best-product__img-wrapper {
   margin: 0 30px 27px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+
+    margin: 0 50px 0 0;
+    padding-top: 12px;
+  }
 }
 
 .best-product__img {
   display: block;
   margin: 0 auto;
-
-  @media (min-width: $tablet-width) {
-    grid-column: 2 / 3;
-    grid-row: 1 / -1;
-  }
+  width: 100%;
 }
 
 .best-product__price-wrapper {
@@ -110,6 +139,9 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+
+    margin: 0 0 0 50px;
+    padding-top: 30px;
   }
 }
 
@@ -118,6 +150,14 @@
 
   font-weight: 700;
   font-size: 17px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+
+    margin: 0 0 32px;
+
+  }
 }
 
 .best-product__button {

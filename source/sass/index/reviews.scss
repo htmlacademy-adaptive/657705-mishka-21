@@ -10,6 +10,11 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+
+    margin: 83px 0 38px 50px;
+
+    font-size: 43px;
+    line-height: 50px;
   }
 }
 
@@ -22,14 +27,13 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
+
+    margin: 0 50px;
   }
 }
 
 .reviews__item {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
-  }
+  position: relative;
 }
 
 .reviews__desc {
@@ -41,6 +45,11 @@
 
   font-size: 15px;
   line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 62px;
+    font-size: 17px;
+  }
 }
 
 .reviews__author-name {
@@ -52,6 +61,10 @@
   font-size: 17px;
   line-height: 24px;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
 }
 
 .reviews__author-twitter {
@@ -60,11 +73,12 @@
 }
 
 .reviews__arrow-wrapper {
-  /* Будут спозиционированы относительно reviews__item, так и не смог придумать как их вставить в сетку, не нарушая логику HTML */
   display: flex;
 
   @media (min-width: $tablet-width) {
-    display: none;
+    position: absolute;
+    bottom: 12px;
+    right: 19px;
   }
 }
 
@@ -81,10 +95,22 @@
   background-color: transparent;
 
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    padding: 0;
+    width: auto;
+
+    border: none;
+  }
 }
 
 .reviews__prev {
   border-right: none;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 37px;
+  }
 }
 
 .reviews__next svg {
@@ -106,6 +132,17 @@
   outline: none;
 }
 
+.reviews__btn-wrapper {
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: end;
+
+    margin-right: 50px;
+    padding-top: 79px;
+  }
+}
+
 .reviews__button {
   display: block;
   margin: 0 30px;
@@ -115,7 +152,8 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+    margin: 0;
+    padding: 14px 36px;
+    max-width: 175px;
   }
 }

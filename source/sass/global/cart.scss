@@ -5,8 +5,8 @@
 .cart__link {
   position: relative;
 
-  display: block;
-  padding-left: 46px;
+  display: flex;
+  padding: 30px 30px 25px;
 
   font-weight: 700;
   font-size: 17px;
@@ -21,14 +21,22 @@
   &:active {
     color: rgba($black, 0.3);
   }
+
+  @media (min-width: $tablet-width) {
+    padding: 33px 0 31px 31px;
+
+    border-left: 1px solid $lighter-grey;
+  }
 }
 
 .cart__icon {
-  position: absolute;
-  top: 0;
-  left: 0;
+  margin-right: 25px;
 
   fill: rgba($black, 0.2);
+
+  @media (min-width: $tablet-width) {
+    margin: 2px 31px 0 0;
+  }
 }
 
 .cart__link:hover .cart__icon {
