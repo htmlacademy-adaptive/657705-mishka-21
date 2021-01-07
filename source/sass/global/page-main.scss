@@ -26,6 +26,24 @@
       width: 100%;
       height: 24px;
 
+      background-image: url("../img/zigzag-fill-tablet.svg");
+      background-repeat: repeat-x;
+      background-position: bottom;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 73px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: -20px;
+
+      width: 100%;
+      height: 35px;
+
       background-image: url("../img/zigzag-fill-desktop.svg");
       background-repeat: repeat-x;
       background-position: bottom;
@@ -33,8 +51,9 @@
   }
 }
 
+
 .page-main__title {
-  margin: 0 30px 120px;
+  margin-bottom: 120px;
 
   font-weight: 700;
   font-size: 27px;
@@ -43,12 +62,17 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    margin-left: 50px;
-    margin-right: 50px;
     margin-bottom: 371px;
 
     font-size: 43px;
     line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 357px;
+
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
@@ -63,7 +87,20 @@
     grid-template-columns: repeat(2, 1fr);
 
     margin: 0 50px;
+  }
 
+  @media (min-width: $desktop-width) {
+    display: flex;
+
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+}
+
+.page-main__item {
+  @media (min-width: $desktop-width) {
+    width: 50%;
   }
 }
 
@@ -172,6 +209,13 @@
 
     background-image: url("../img/zigzag-line-tablet.svg");
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 0;
+    margin-bottom: 67px;
+
+    background: none;
+  }
 }
 
 .page-main__about-us {
@@ -179,6 +223,11 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 225px;
+    margin-bottom: 33px;
   }
 }
 
@@ -191,14 +240,35 @@
   background-position: bottom;
 
   @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto;
-
     padding-bottom: 103px;
     margin-bottom: 46px;
 
     background-image: url("../img/zigzag-line-tablet.svg"), url("../img/review-back.jpg");
+    background-repeat: repeat-x, no-repeat;
+    background-position: bottom, left top;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1150px;
+    margin: 0 auto 71px;
+    padding: 0;
+
+    background: none;
+  }
+}
+
+.page-main__reviews-wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 156px;
+    margin: 0 50px;
+
+    background-image: url("../img/zigzag-line-desktop.svg"), url("../img/review-back-desktop.jpg");
     background-repeat: repeat-x, no-repeat;
     background-position: bottom, left top;
   }
@@ -215,7 +285,13 @@
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content auto auto;
+
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 50px;
+
+    background-position: 113px 62px;
   }
 }

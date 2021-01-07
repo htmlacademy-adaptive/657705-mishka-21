@@ -6,11 +6,23 @@
 
     border: none;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding-top: 33px;
+    padding-right: 35px;
+  }
 }
 
 .site-list__item:not(:last-child) {
   @media (min-width: $desktop-width) {
     border-right: 1px solid $lighter-grey;
+  }
+}
+
+.site-list__item:not(:first-child) {
+  @media (min-width: $desktop-width) {
+    padding: 33px 35px 0 35px;
   }
 }
 
@@ -36,5 +48,9 @@
     padding: 0;
 
     font-size: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 17px;
   }
 }

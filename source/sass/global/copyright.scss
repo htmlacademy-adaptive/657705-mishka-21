@@ -1,7 +1,7 @@
 .copyright__text {
   display: block;
   padding-top: 8px;
-  margin-right: 17%;
+  margin-right: 11%;
 
   font-weight: 700;
   font-size: 19px;
@@ -10,5 +10,9 @@
 
   @media (min-width: $tablet-width) {
     margin: 0 27px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 29px 0 0;
   }
 }

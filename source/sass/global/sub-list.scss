@@ -2,9 +2,8 @@
   list-style: none;
 }
 
-.sub-list__item {
-  padding-top: 28px;
-  padding-bottom: 28px;
+.sub-list__item:not(:last-child) {
+  margin-right: 62px;
 }
 
 .sub-list__link {
@@ -20,5 +19,9 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 15px;
   }
 }

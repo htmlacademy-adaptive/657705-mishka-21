@@ -10,7 +10,15 @@
     justify-content: flex-start;
 
     padding-left: 101px;
-    padding-top: 7px;;
+    padding-top: 7px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 101px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 292px;
   }
 }
 
