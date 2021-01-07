@@ -10,11 +10,23 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+
+    margin: 83px 0 36px 0;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 78px 0 38px 174px;
+
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
 .reviews__list {
-  margin: 0;
+  margin: 0 0 38px;
   padding: 0;
 
   list-style: none;
@@ -22,18 +34,22 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
+
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding-left: 175px;
   }
 }
 
 .reviews__item {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
-  }
+  position: relative;
 }
 
 .reviews__desc {
-  margin: 0 0 30px;
+  margin: 0 0 29px;
 }
 
 .reviews__text {
@@ -41,16 +57,34 @@
 
   font-size: 15px;
   line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 62px;
+    font-size: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 42px;
+  }
 }
 
 .reviews__author-name {
   display: block;
+  margin-bottom: 3px;
 
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 17px;
+  }
 }
 
 .reviews__author-twitter {
@@ -59,17 +93,85 @@
 }
 
 .reviews__arrow-wrapper {
-  /* Будут спозиционированы относительно reviews__item, так и не смог придумать как их вставить в сетку, не нарушая логику HTML */
+  display: flex;
+
   @media (min-width: $tablet-width) {
-    display: none;
+    position: absolute;
+    bottom: 12px;
+    right: 19px;
+  }
+}
+
+.reviews__prev,
+.reviews__next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+  padding: 12px 10px;
+
+  border: 1px solid $lighter-grey;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    padding: 0;
+    width: auto;
+
+    border: none;
+  }
+}
+
+.reviews__prev {
+  border-right: none;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 37px;
+  }
+}
+
+.reviews__next svg {
+  transform: rotate(180deg);
+}
+
+.reviews__prev:hover svg,
+.reviews__next:hover svg {
+  opacity: 0.6;
+}
+
+.reviews__prev:active svg,
+.reviews__next:active svg {
+  opacity: 0.3;
+}
+
+.reviews__prev:active,
+.reviews__next:active {
+  outline: none;
+}
+
+.reviews__btn-wrapper {
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: end;
+
+    padding-top: 79px;
   }
 }
 
 .reviews__button {
+  display: block;
+  padding: 14px;
+
   text-decoration: none;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+    margin: 0;
+    padding: 14px 36px;
+    max-width: 175px;
   }
 }

@@ -1,11 +1,37 @@
 .body__main {
   margin-bottom: 39px;
+
+  @media (max-width: $mobile-max-width) {
+    position: relative;
+    top: 79px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 105px;
+
+    border-top: 1px solid rgba($black, 0.1%);
+  }
+}
+
+.body__header {
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
 }
 
 .body__footer {
-  @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  background-color: $grey;
+
+  @media (max-width: $mobile-max-width) {
+    position: relative;
+    top: 79px;
   }
 }
 

@@ -1,10 +1,17 @@
-.site-list {
-  list-style: none;
-}
-
 .site-list__item {
-  padding-top: 28px;
-  padding-bottom: 28px;
+  border-bottom: 1px solid $lighter-grey;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 36px;
+
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding-top: 33px;
+    padding-right: 35px;
+  }
 }
 
 .site-list__item:not(:last-child) {
@@ -13,7 +20,16 @@
   }
 }
 
+.site-list__item:not(:first-child) {
+  @media (min-width: $desktop-width) {
+    padding: 33px 35px 0 35px;
+  }
+}
+
 .site-list__link {
+  display: block;
+  padding: 29px 30px 25px 76px;
+
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
@@ -26,5 +42,15 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+
+    font-size: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 17px;
   }
 }

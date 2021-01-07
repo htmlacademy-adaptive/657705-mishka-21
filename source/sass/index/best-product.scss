@@ -1,23 +1,47 @@
+.best-product__wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: max-content auto auto;
+    column-gap: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 58px;
+    padding-bottom: 97px;
+
+    background-image: url("../img/zigzag-line-desktop.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+  }
+}
+
 .best_product__title-wrapper {
   display: flex;
   flex-direction: column;
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 
   @media (min-width: $tablet-width) {
+    z-index: 1;
+
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
     flex-direction: row;
     justify-content: space-between;
+
+    margin: 0 0 37px;
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    padding-top: 61px;
   }
 }
 
 .best-product__title {
   order: 1;
   margin: 0;
-  padding: 0;
 
   font-weight: 700;
   font-size: 17px;
@@ -25,61 +49,172 @@
   color: $green;
   text-transform: uppercase;
 
+  @media (min-width: $tablet-width) {
+    margin: 5px 13px 0 0;
+    width: 100px;
+
+    line-height: 17px;
+    text-align: center;
+  }
+
   @media (min-width: $desktop-width) {
+    margin: 8px 44px 0 31px;
     order: 0;
   }
 }
 
 .best-product__subtitle {
-  margin: 0;
-  padding: 0;
+  margin: 0 0 5px;
 
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
   color: $black;
-}
 
-.best-product__desc {
   @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 334px;
-    grid-template-rows: auto auto;
+    margin: 0;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
 .best-product__desc-wrapper {
-  @media (min-width: $tablet-width) {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-}
+  margin-bottom: 28px;
 
-.best-product__price-wrapper {
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-  }
-}
 
-.best-product__img {
-  @media (min-width: $tablet-width) {
-    grid-column: 2 / 3;
-    grid-row: 1 / -1;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 175px;
   }
 }
 
 .best-product__text {
   margin: 0 0 28px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+
+    margin: 0 0 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 58px;
+  }
 }
 
 .best-product__list {
-  margin: 0 0 28px;
+  margin: 0;
 
   line-height: 20px;
 }
 
+.best-product__item {
+  display: flex;
+
+  margin: 0 0 7px;
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid $lighter-grey;
+}
+
+.best-product__property {
+  width: 38%;
+
+  @media (min-width: $tablet-width) {
+    width: 33%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 34%;
+  }
+}
+
+.best-product__value {
+  flex-grow: 1;
+  margin: 0;
+}
+
+.best-product__img-wrapper {
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
+    grid-row: 2 / -1;
+
+    margin: 0;
+    padding-top: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 1 / -1;
+
+    padding: 0;
+  }
+}
+
+.best-product__img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.best-product__price-wrapper {
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+
+    padding-top: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 10px;
+    text-align: right;
+  }
+}
+
 .best-product__price {
+  margin: 0 0 23px;
+
   font-weight: 700;
   font-size: 17px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+
+    margin: 0 0 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: auto 73px 32px 0;
+  }
+}
+
+.best-product__button {
+  width: 100%;
+  padding: 14px;
+
+  @media (min-width: $desktop-width) {
+    width: 63%;
+    margin-left: auto;
+  }
 }

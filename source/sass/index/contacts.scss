@@ -1,19 +1,32 @@
 .contacts__title {
-  margin: 0 0 28px;
+  margin-bottom: 28px;
 
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
   color: $black;
 
+  @media (min-width: $tablet-width) {
+    margin: 0 50px 49px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
     grid-row: 1/ 2;
+
+    margin: 0;
+    padding: 79px 0 0 174px;
+
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
 .contacts__list {
-  margin: 0 0 62px;
+  margin-bottom: 62px;
 
   font-size: 14px;
   line-height: 30px;
@@ -21,6 +34,10 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    margin: 0 50px 48px;
+
+    font-size: 17px;
   }
 
   @media (min-width: $desktop-width) {
@@ -29,13 +46,41 @@
 
     grid-column: 1 / 2;
     grid-row: 2/ 3;
+
+    margin: 0;
+    padding: 36px 0 0 175px;
   }
 }
 
-/* Нижнюю черту сделаю через псевдоэлемент в дальнейшем */
+.contacts__item {
+  display: flex;
+}
+
+.contacts__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.contacts__property {
+  width: 30%;
+
+  @media (min-width: $tablet-width) {
+    width: 23%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 22%;
+  }
+}
+
+.contacts__value {
+  margin: 0;
+}
+
 .contacts__mail-link {
-  font-size: 17px;
-  line-height: 30px;
+  position: relative;
+
+  font-size: inherit;
+  line-height: inherit;
   color: $lighter-black;
   text-decoration: none;
 
@@ -43,25 +88,85 @@
   &:active {
     color: $darker-green-hover;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+
+    height: 1px;
+
+    background-color: $darker-green-link;
+  }
+
+  &:hover::after {
+    background-color: $darker-green-hover;
+  }
+
+  &:active::after {
+    background-color: $darker-green-hover;
+    opacity: 0.3;
+  }
 }
 
 .contacts__address {
   font-style: normal;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.contacts__map {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 41px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.contacts__map-wrapper {
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 1/ -1;
+
+    padding: 0;
+  }
+}
+
+.contacts__btn-wrapper {
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+
+    padding-left: 175px;
+  }
 }
 
 .contacts__button {
   display: block;
+  padding: 14px;
+  text-align: center;
+
   text-decoration: none;
 
-  @media (min-width: $desktop-width) {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    width: 30%;
   }
-}
 
-.contacts__map {
   @media (min-width: $desktop-width) {
-    grid-column: 2 / 3;
-    grid-row: 1/ -1;
+    width: 230px;
+    margin: 83px 0 0;
+
+    font-size: 17px;
+    line-height: 20px;
   }
 }

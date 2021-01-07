@@ -1,6 +1,36 @@
 .social__list {
+  display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-start;
+
+    padding-left: 101px;
+    padding-top: 7px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 101px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 292px;
+  }
+}
+
+.social__item:not(:last-child) {
+  margin-right: 41px;
+}
+
+.social__link:hover svg {
+  fill: $darker-green-hover;
+}
+
+.social__link:active svg {
+  fill: $darker-green-hover;
+  opacity: 0.3;
 }
