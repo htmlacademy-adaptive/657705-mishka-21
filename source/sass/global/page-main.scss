@@ -156,6 +156,13 @@
   &:active::after {
     opacity: 0.3;
   }
+
+  @media (min-width: $tablet-width) {
+    &:hover {
+      transform: translateY(-5px);
+      height: calc(100% + 5px);
+    }
+  }
 }
 
 .page-main__second-link {
@@ -193,6 +200,14 @@
   &:active::after {
     opacity: 0.3;
   }
+
+  @media (min-width: $tablet-width) {
+    &:hover {
+      transform: translateY(-5px);
+      height: calc(100% + 5px);
+    }
+  }
+
 }
 
 .page-main__product {

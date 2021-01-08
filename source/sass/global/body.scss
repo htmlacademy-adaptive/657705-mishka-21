@@ -1,11 +1,6 @@
 .body__main {
   margin-bottom: 39px;
 
-  @media (max-width: $mobile-max-width) {
-    position: relative;
-    top: 79px;
-  }
-
   @media (min-width: $tablet-width) {
     margin-bottom: 57px;
   }
@@ -28,11 +23,6 @@
 
 .body__footer {
   background-color: $grey;
-
-  @media (max-width: $mobile-max-width) {
-    position: relative;
-    top: 79px;
-  }
 }
 
 .body__form-main {

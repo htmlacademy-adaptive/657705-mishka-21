@@ -1,12 +1,6 @@
 .main-nav {
   position: relative;
 
-  @media (max-width: $mobile-max-width) {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-  }
-
   @media (min-width: $tablet-width) {
 
     padding-left: 50px;
@@ -178,10 +172,7 @@
   }
 
   .main-nav--opened .main-nav__inner {
-    position: absolute;
-    z-index: 10;
-    left: 0;
-    right: 0;
+    display: block;
   }
 
   .page-header--no-js .main-nav__toggle {
