@@ -4,6 +4,12 @@
   @media (min-width: $tablet-width) {
     padding: 61px 50px 50px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 61px 0 50px;
+
+    background-color: $grey;
+  }
 }
 
 .form-contacts__list {
@@ -21,6 +27,12 @@
   @media (min-width: $tablet-width) {
     background-color: $grey;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 1150px;
+    margin: 0 auto;
+    padding: 0 225px 0 50px;
+  }
 }
 
 .form-contacts__item {
@@ -31,6 +43,10 @@
     display: grid;
     grid-template-columns: 155px 1fr;
     column-gap: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 20px;
   }
 }
 
@@ -60,6 +76,11 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 7px;
+    padding-left: 62px;
   }
 }
 
@@ -123,6 +144,11 @@
     top: 0;
     right: 26px;
   }
+
+  @media (min-width: $desktop-width) {
+    top: 0;
+    right: 8px;
+  }
 }
 
 .form-contacts__email-icon {
@@ -132,6 +158,11 @@
   @media (min-width: $tablet-width) {
     top: 5px;
     right: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 5px;
+    right: 4px;;
   }
 }
 

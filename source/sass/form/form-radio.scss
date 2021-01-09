@@ -4,6 +4,10 @@
   @media (min-width: $tablet-width) {
     padding: 0 50px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 50px;
+  }
 }
 
 .form-radio__wrapper {
@@ -11,6 +15,10 @@
     display: grid;
     grid-template-columns: 155px 1fr;
     column-gap: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 20px;
   }
 }
 
@@ -44,6 +52,11 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 17px;
+    padding-left: 61px;
   }
 }
 
@@ -94,6 +107,10 @@
     width: 46px;
     height: 46px;
     margin-right: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 30px;
   }
 }
 

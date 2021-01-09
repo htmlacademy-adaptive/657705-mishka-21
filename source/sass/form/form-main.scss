@@ -2,6 +2,12 @@
   @media (min-width: $tablet-width) {
     margin: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .form-main__title-wrapper {
@@ -18,6 +24,14 @@
     background-repeat: repeat-x;
     background-position: bottom;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 0 115px;
+    margin-bottom: 100px;
+
+    background-image: url("../img/zigzag-fill-desktop-form.svg");
+    border-top: 1px solid rgba($black, 0.1);
+  }
 }
 
 .form-main__title {
@@ -33,6 +47,15 @@
     font-size: 43px;
     line-height: 50px;
   }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 50px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .form-main__desc {
@@ -46,5 +69,10 @@
 
     font-size: 17px;
     line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 758px;
+    padding: 0 0 0 30px;
   }
 }

@@ -1,3 +1,13 @@
+.form-text {
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 225px 0 50px;
+  }
+}
+
 .form-text__label {
   display: block;
 
@@ -28,6 +38,11 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 20px;
+    padding-left: 62px;
   }
 }
 
