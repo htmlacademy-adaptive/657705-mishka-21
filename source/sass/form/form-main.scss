@@ -1,8 +1,23 @@
+.form-main__order-form {
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
 .form-main__title-wrapper {
   padding: 73px 0 74px;
   margin-bottom: 17px;
 
   background-color: $grey;
+
+  @media (min-width: $tablet-width) {
+    padding: 100px 50px 87px;
+    margin-bottom: 55px;
+
+    background-image: url("../img/zigzag-fill-tablet.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+  }
 }
 
 .form-main__title {
@@ -13,6 +28,11 @@
   line-height: 30px;
   color: $black;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 
 .form-main__desc {
@@ -20,4 +40,11 @@
 
   font-size: 13px;
   color: $lighter-black;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 64px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
 }

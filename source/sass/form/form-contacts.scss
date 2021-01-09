@@ -1,5 +1,9 @@
 .form-contacts {
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 61px 50px 50px;
+  }
 }
 
 .form-contacts__list {
@@ -25,8 +29,13 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 155px 1fr;
+    column-gap: 12px;
   }
+}
+
+.form-contacts__item:not(:last-child) {
+  margin-bottom: 35px;
 }
 
 .form-contacts__label {
@@ -48,6 +57,10 @@
       background-color: $darker-green-link;
     }
   }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 6px;
+  }
 }
 
 .form-contacts__label-email {
@@ -56,15 +69,25 @@
   }
 }
 
-.form-contacts__item:not(:last-child) {
-  margin-bottom: 35px;
+.form-contacts__input-wrapper {
+  position: relative;
 }
 
 .form-contacts__input {
-  padding: 0 0 17px;
+  width: 100%;
+  padding: 0 40px 17px 0;
 
   border: none;
   border-bottom: 2px solid $lighter-black;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 67px 13px 16px;
+
+    font-size: 19px;
+    line-height: 18px;
+
+    background-color: transparent;
+  }
 }
 
 .form-contacts__input:hover,
@@ -78,4 +101,48 @@
   font-size: 17px;
   line-height: 18px;
   color: rgba($black, 0.3);
+
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+    line-height: 18px;
+  }
 }
+
+.form-contacts__phone-icon,
+.form-contacts__email-icon {
+  position: absolute;
+
+  opacity: 0.3;
+}
+
+.form-contacts__phone-icon {
+  top: -3px;
+  right: 7px;
+
+  @media (min-width: $tablet-width) {
+    top: 0;
+    right: 26px;
+  }
+}
+
+.form-contacts__email-icon {
+  top: 2px;
+  right: 3px;
+
+  @media (min-width: $tablet-width) {
+    top: 5px;
+    right: 22px;
+  }
+}
+
+.form-contacts__input:hover + .form-contacts__phone-icon,
+.form-contacts__input:active + .form-contacts__phone-icon,
+.form-contacts__input:focus + .form-contacts__phone-icon,
+.form-contacts__input:hover + .form-contacts__email-icon,
+.form-contacts__input:active + .form-contacts__email-icon,
+.form-contacts__input:focus + .form-contacts__email-icon {
+  fill: $darker-green-link;
+
+  opacity: 1;
+}
+

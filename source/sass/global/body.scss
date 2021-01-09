@@ -27,6 +27,10 @@
 
 .body__form-main {
   margin-bottom: 55px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
 }
 
 .body__catalog-main {

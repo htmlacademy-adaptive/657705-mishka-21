@@ -25,6 +25,10 @@
       background-color: $darker-green-link;
     }
   }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 20px;
+  }
 }
 
 .form-text__input {
@@ -33,6 +37,11 @@
   padding: 15px;
 
   border: 2px solid $lighter-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+    line-height: 18px;
+  }
 }
 
 .form-text__input:hover,
@@ -47,4 +56,9 @@
   font-size: 17px;
   line-height: 18px;
   color: rgba($black, 0.3);
+
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+    line-height: 18px;
+  }
 }
