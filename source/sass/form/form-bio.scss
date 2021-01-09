@@ -3,11 +3,32 @@
 }
 
 .form-bio__title {
+  margin: 0;
+
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
   color: $green;
   text-transform: uppercase;
+
+  @media (max-width: $mobile-max-width) {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 28px;
+
+    &::after {
+      content: "";
+
+      flex-grow: 1;
+      flex-shrink: 1;
+      width: 100%;
+      height: 1px;
+      margin-left: 23px;
+
+      background-color: $darker-green-link;
+    }
+  }
 }
 
 .form-bio__wrapper {
@@ -27,6 +48,33 @@
   color: $black;
 
   list-style: none;
+}
+
+.form-bio__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-bio__item:not(:last-child) {
+  margin-bottom: 22px;
+}
+
+.form-bio__label {
+  margin-bottom: 16px;
+}
+
+.form-bio__input {
+  padding-bottom: 14px;
+
+  border: none;
+  border-bottom: 2px solid $lighter-black;
+}
+
+.form-bio__input:hover,
+.form-bio__input:active,
+.form-bio__input:focus {
+  border-color: $darker-green-link;
+  outline: none;
 }
 
 .form-bio__input::placeholder {

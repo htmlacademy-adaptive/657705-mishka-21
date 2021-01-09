@@ -1,11 +1,11 @@
 .order-form__radio {
-  margin: 0 0 43px;
+  margin: 0 0 33px;
 
   border: none;
 }
 
 .order-form__checkbox {
-  margin: 0 0 43px;
+  margin: 0 0 34px;
 
   border: none;
 }
@@ -23,7 +23,7 @@
 }
 
 .order-form__form-text {
-  margin: 0 0 17px;
+  margin: 0 0 11px;
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -45,4 +45,9 @@
   font-size: 14px;
   line-height: 16px;
   color: $lighter-black;
+}
+
+.order-form__button {
+  width: 100%;
+  padding: 14px 15px;
 }

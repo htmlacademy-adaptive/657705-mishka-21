@@ -20,14 +20,58 @@
 }
 
 .form-contacts__item {
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+.form-contacts__label {
+  @media (max-width: $mobile-max-width) {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 18px;
+
+    &::after {
+      content: "";
+
+      flex-grow: 0;
+      flex-shrink: 1;
+      width: 100%;
+      height: 1px;
+      margin-left: 23px;
+
+      background-color: $darker-green-link;
+    }
+  }
+}
+
+.form-contacts__label-email {
+  @media (max-width: $mobile-max-width) {
+    flex-shrink: 0;
+  }
+}
+
 .form-contacts__item:not(:last-child) {
-  margin-bottom: 34px;
+  margin-bottom: 35px;
+}
+
+.form-contacts__input {
+  padding: 0 0 17px;
+
+  border: none;
+  border-bottom: 2px solid $lighter-black;
+}
+
+.form-contacts__input:hover,
+.form-contacts__input:active,
+.form-contacts__input:focus {
+  border-color: $darker-green-link;
+  outline: none;
 }
 
 .form-contacts__input::placeholder {
