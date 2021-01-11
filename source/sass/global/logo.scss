@@ -2,3 +2,12 @@
   width: 86px;
   height: 35px;
 }
+
+.logo:hover svg {
+  fill: $darker-green-hover;
+}
+
+.logo:active svg {
+  fill: $darker-green-hover;
+  opacity: 0.3;
+}

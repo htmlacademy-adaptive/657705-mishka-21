@@ -37,11 +37,11 @@
 }
 
 .page-footer__copyright {
-  display: flex;
-  justify-content: center;
-
   @media (min-width: $tablet-width) {
-    margin: 0 0 0 0;
+    display: flex;
+    justify-content: center;
+
+    margin: 0;
     padding: 0;
 
     border: none;
