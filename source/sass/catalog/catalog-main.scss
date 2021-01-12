@@ -6,7 +6,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 100px 50px 87px;
-    margin-bottom: 55px;
+    margin-bottom: 67px;
 
     background-image: url("../img/zigzag-fill-tablet.svg");
     background-repeat: repeat-x;
@@ -48,6 +48,10 @@
 
 .catalog-main__catalog {
   margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 53px;
+  }
 }
 
 .catalog-main__process {
@@ -61,6 +65,10 @@
 
   &:active {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 50px;
   }
 
   @media (min-width: $desktop-width) {

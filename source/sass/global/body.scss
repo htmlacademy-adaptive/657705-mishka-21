@@ -35,4 +35,8 @@
 
 .body__catalog-main {
   margin-bottom: 58px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
 }

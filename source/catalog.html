@@ -74,14 +74,19 @@
       <ul class="catalog__list">
         <li class="catalog__item product">
           <a class="product__img-link" href="#">
-            <img class="product__img" src="img/photo-1-mobile.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/photo-1-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg">
+              <img class="product__img" src="img/photo-1-mobile.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+            </picture>
           </a>
           <div class="product__info-wrapper">
             <div class="product__desc-wrapper">
               <a class="product__link" href="#">
                 <h3 class="product__title">Зайчик-попрыгайчик</h3>
               </a>
-              <p class="product__desc">Рост 30 см, вес 200 г</p></div>
+              <p class="product__desc">Рост 30 см, вес 200 г</p>
+            </div>
             <div class="product__price-wrapper">
               <p class="product__price">1 200 руб.</p>
               <a class="product__cart-link" href="#" aria-label="Добавить в корзину">
@@ -96,7 +101,11 @@
         </li>
         <li class="catalog__item product">
           <a class="product__img-link" href="#">
-            <img class="product__img" src="img/photo-2-mobile.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/photo-2-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg">
+              <img class="product__img" src="img/photo-2-mobile.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+            </picture>
           </a>
           <div class="product__info-wrapper">
             <div class="product__desc-wrapper">
@@ -118,12 +127,16 @@
         </li>
         <li class="catalog__item product">
           <a class="product__img-link" href="#">
-            <img class="product__img" src="img/photo-3-mobile.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/photo-3-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg">
+              <img class="product__img" src="img/photo-3-mobile.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+            </picture>
           </a>
           <div class="product__info-wrapper">
             <div class="product__desc-wrapper">
               <a class="product__link" href="#">
-                <h3 class="product__title">Большая корзинка для игрушек</h3>
+                <h3 class="product__title">Большая корзинка<br> для игрушек</h3>
               </a>
               <p class="product__desc">Диаметр 30 см, высота 30 см</p></div>
             <div class="product__price-wrapper">
@@ -143,7 +156,11 @@
 
     <section class="catalog-main__process process">
       <div class="process__video">
-        <img class="process__video-img" src="img/video-mobile.jpg" width="260" height="150" alt="Процесс производства">
+        <picture class="process__img-wrapper">
+          <source media="(min-width: 768px)" srcset="img/video-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="img/video-tablet.jpg">
+          <img class="process__video-img" src="img/video-mobile.jpg" width="260" height="150" alt="Процесс производства">
+        </picture>
         <svg class="process__video-icon" width="101" height="77" viewBox="0 0 101 77" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M97.0001 18.1C97.0001 18.1 96.1001 11.1 93.2001 7.99997C89.6001 3.99997 85.5001 3.89995 83.7001 3.69995C70.4001 2.69995 50.4001 2.69995 50.4001 2.69995H50.3001C50.3001 2.69995 30.3001 2.69995 17.0001 3.69995C15.1001 3.89995 11.1001 3.99997 7.50011 7.99997C4.70011 11.1 3.7001 18.1 3.7001 18.1C3.7001 18.1 2.80011 26.3 2.80011 34.5V42.2C2.80011 50.4 3.7001 58.6 3.7001 58.6C3.7001 58.6 4.60011 65.6 7.50011 68.7C11.1001 72.7 15.9001 72.6 18.0001 73C25.6001 73.8 50.4001 74 50.4001 74C50.4001 74 70.4001 74 83.7001 73C85.6001 72.8 89.6001 72.7 93.2001 68.7C96.0001 65.6 97.0001 58.6 97.0001 58.6C97.0001 58.6 97.9001 50.4 97.9001 42.2V34.5C97.9001 26.3 97.0001 18.1 97.0001 18.1Z"
