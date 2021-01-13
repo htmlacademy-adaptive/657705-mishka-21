@@ -1,0 +1,132 @@
+.modal {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba($white, 0.9);
+}
+
+.modal--show {
+  display: block;
+}
+
+.modal__content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 11;
+  transform: translate(-50%, -50%);
+
+  width: 566px;
+  padding: 37px 10px 46px;
+
+  background-color: $white;
+  border: 1px solid $lighter-grey-modal;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+
+  @media (max-width: $mobile-max-width) {
+    padding: 37px 10px 46px;
+  }
+}
+
+.modal__title {
+  margin: 0 0 12px;
+
+  font-size: 30px;
+  line-height: 57px;
+  text-transform: uppercase;
+  color: $black;
+  text-align: center;
+
+  @media (max-width: $mobile-max-width) {
+    width: 155px;
+    margin: 0 auto 12px;
+
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+
+.modal__text {
+  margin: 0 0 19px;
+
+  font-size: 17px;
+  line-height: 30px;
+  color: $lighter-black;
+  text-align: center;
+
+  @media (max-width: $mobile-max-width) {
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+
+.modal__form {
+  padding: 0 97px;
+
+  @media (max-width: $mobile-max-width) {
+    padding: 0 142px;
+  }
+}
+
+.modal__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 7px;
+
+  margin: 0 0 31px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.modal__input + .modal__label {
+  display: block;
+  padding: 12px 10px;
+
+  text-align: center;
+
+  background-color: $white;
+  border: 2px solid rgba($lighter-black, 0.1);
+}
+
+.modal__input:checked + .modal__label {
+  border-color: $darker-green-link;
+}
+
+.modal__input:focus + .modal__label {
+  border: 2px solid $darker-green-link;
+}
+
+.modal__input + .modal__label:hover {
+  border: 2px solid rgba($lighter-black, 0.3);
+}
+
+.modal__input + .modal__label:active {
+  border: 2px solid $darker-green-link;
+}
+
+.modal__button {
+  width: 100%;
+  padding: 14px 10px;
+
+  color: $white;
+
+  background-color: $green;
+  border-color: $green;
+}
+
+.modal__button:hover {
+  background-color: desaturate($green, 10%);
+  border-color: desaturate($green, 10%);
+}
+
+.modal__button:active {
+  background-color: desaturate($green, 20%);
+  border-color: desaturate($green, 20%);
+}
