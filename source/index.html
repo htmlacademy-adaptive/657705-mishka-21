@@ -22,10 +22,10 @@
         </div>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a class="site-list__link" href="#">Каталог товаров</a>
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="#">Вязание на заказ</a>
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
         <div class="main-nav__user-wrapper">
@@ -116,7 +116,7 @@
           </div>
           <div class="best-product__price-wrapper">
             <p class="best-product__price">Цена: 990 руб.</p>
-            <button class="best-product__button button">Заказать</button>
+            <a class="best-product__button best-product__button--modal button">Заказать</a>
           </div>
         </div>
       </div>
@@ -268,9 +268,37 @@
       </div>
     </div>
   </footer>
+
+  <section class="modal">
+    <div class="modal__content">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__text">Выберите размер:</p>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+        <ul class="modal__list">
+          <li class="modal__item">
+            <input class="modal__input visually-hidden" id="size-s" type="radio" name="type" value="size-s">
+            <label class="modal__label" for="size-s">S</label>
+          </li>
+          <li class="modal__item">
+            <input class="modal__input visually-hidden" id="size-m" type="radio" name="type" value="size-m" checked>
+            <label class="modal__label" for="size-m">M</label>
+          </li>
+          <li class="modal__item">
+            <input class="modal__input visually-hidden" id="size-l" type="radio" name="type" value="size-l">
+            <label class="modal__label" for="size-l">L</label>
+          </li>
+        </ul>
+        <button class="modal__button button" type="submit">Добавить</button>
+      </form>
+    </div>
+  </section>
+
   <script>
     let pageHeader = document.querySelector('.page-header');
     let pageNav = document.querySelector('.main-nav');
+
+    let bestProductButton = document.querySelector('.best-product__button--modal');
+    let bestProductModal = document.querySelector('.modal');
 
     pageHeader.classList.remove('page-header--no-js');
 
@@ -283,7 +311,11 @@
         pageNav.classList.remove('main-nav--opened');
       }
     });
-  </script>
 
+    bestProductButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      bestProductModal.classList.add('modal--show');
+    });
+  </script>
 </body>
 </html>
