@@ -15,7 +15,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 100px 0 115px;
-    margin-bottom: 100px;
+    margin-bottom: 110px;
 
     background-image: url("../img/zigzag-fill-desktop-form.svg");
     border-top: 1px solid rgba($black, 0.1);
@@ -52,6 +52,20 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 53px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 1150px;
+    margin: 0 auto 56px;
+    padding: 0 50px;
+  }
+}
+
+.catalog-main__process-wrapper {
+  @media (min-width: $desktop-width) {
+    width: 1150px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
 }
 
 .catalog-main__process {
@@ -73,7 +87,9 @@
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 682px 1fr;
+    grid-template-rows: auto 1fr;
+
+    margin: 0;
   }
 }
