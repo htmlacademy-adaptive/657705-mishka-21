@@ -8,7 +8,6 @@
 </head>
 <body class="page__body body">
   <header class="body__header page-header page-header--no-js">
-
     <!-- .main-nav--closed при закрытом меню-->
     <nav class="main-nav main-nav--closed">
       <div class="main-nav__inner">
@@ -109,9 +108,9 @@
           </div>
           <div class="best-product__img-wrapper">
             <picture>
-              <source media="(min-width: 1150px)" srcset="img/product-desktop.jpg">
-              <source media="(min-width: 768px)" srcset="img/product-tablet.jpg">
-              <img class="best-product__img" src="img/product-mobile.jpg" width="260" height="315" alt="Вязаные корзинки">
+              <source media="(min-width: 1150px)" srcset="img/product-desktop.jpg 1x, img/product-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/product-tablet.jpg 1x, img/product-tablet@2x.jpg 2x">
+              <img class="best-product__img" src="img/product-mobile.jpg" srcset="img/product-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки">
             </picture>
           </div>
           <div class="best-product__price-wrapper">
@@ -205,11 +204,9 @@
         </div>
       </dl>
       <div class="contacts__map-wrapper">
-        <picture>
-          <source media="(min-width: 1150px)" srcset="img/map-desktop.jpg">
-          <source media="(min-width: 768px)" srcset="img/map-tablet.jpg">
-          <img class="contacts__map" src="img/map-mobile.jpg" width="320" height="455" alt="г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
-        </picture>
+        <iframe class="contacts__iframe-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1610647335509!5m2!1sru!2sru"
+                style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+        </iframe>
       </div>
       <div class="contacts__btn-wrapper">
         <a class="contacts__button button container" href="#">Напишите нам</a>
