@@ -122,11 +122,11 @@
 }
 
 .modal__button:hover {
-  background-color: desaturate($green, 10%);
-  border-color: desaturate($green, 10%);
+  background-color: $darker-green-hover;
+  border-color: $darker-green-hover;
 }
 
 .modal__button:active {
-  background-color: desaturate($green, 20%);
-  border-color: desaturate($green, 20%);
+  background-color: $darker-green;
+  border-color: $darker-green;
 }
