@@ -155,6 +155,7 @@
 .main-nav__user-wrapper {
   @media (min-width: $tablet-width) {
     display: flex;
+    flex-wrap: wrap;
     justify-self: end;
   }
 
@@ -170,8 +171,10 @@
 
   @media (min-width: $tablet-width) {
     border: none;
+    border-left: 1px solid $lighter-grey;
   }
 }
+
 
 @media (max-width: $mobile-max-width) {
   .main-nav--closed .main-nav__list,
@@ -204,10 +207,13 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 108px;
+    bottom: -45px;
     left: 50px;
     z-index: 1;
+
     display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 
     background-color: transparent;
     border: none;
