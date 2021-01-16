@@ -5,11 +5,11 @@
   text-decoration: none;
 }
 
-.copyright__link:hover svg {
+.copyright__link:hover .copyright__logo {
   fill: $darker-green-hover;
 }
 
-.copyright__link:active svg {
+.copyright__link:active .copyright__logo {
   fill: $darker-green-hover;
   opacity: 0.3;
 }
